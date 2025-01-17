@@ -9,7 +9,7 @@ internal static class DatabaseConfig
 		Environment.GetEnvironmentVariable(EnvironmentVariables.ProSoftLibraryPostgresConnectionString)
 		??
 #if DEBUG
-		"Host=10.215.10.12;Database=prosoft-library-dev;Username=postgres;Password=postgres;";
+		"Host=10.215.10.50;Database=prosoft-library-dev;Username=postgres;Password=Geheim123#;";
 #else
 		throw new EnvironmentVariableNotFoundException(EnvironmentVariables.ProSoftLibraryPostgresConnectionString);
 #endif

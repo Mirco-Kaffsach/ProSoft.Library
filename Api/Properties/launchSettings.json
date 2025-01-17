@@ -4,7 +4,8 @@
          "commandName": "Project",
          "environmentVariables": {
             "ASPNETCORE_ENVIRONMENT": "Development",
-            "PROSOFT_LIBRARY_POSTGRES_CONNECTIONSTRING": "Host=10.215.10.12;Database=prosoft-library-dev;Username=postgres;Password=postgres;"
+            "PROSOFT_LIBRARY_DATABASE_ENGINE": "postgres",
+            "PROSOFT_LIBRARY_POSTGRES_CONNECTIONSTRING": "Host=10.215.10.50;Database=prosoft-library-dev;Username=postgres;Password=Geheim123#;"
          },
          "dotnetRunMessages": true,
          "applicationUrl": "https://localhost:7120;http://localhost:5197"
@@ -15,7 +16,8 @@
          "environmentVariables": {
             "ASPNETCORE_HTTPS_PORTS": "8081",
             "ASPNETCORE_HTTP_PORTS": "8080",
-            "PROSOFT_LIBRARY_POSTGRES_CONNECTIONSTRING": "Host=10.215.10.12;Database=prosoft-library-dev;Username=postgres;Password=postgres;"
+            "PROSOFT_LIBRARY_DATABASE_ENGINE": "postgres",
+            "PROSOFT_LIBRARY_POSTGRES_CONNECTIONSTRING": "Host=10.215.10.50;Database=prosoft-library-dev;Username=postgres;Password=Geheim123#;"
          },
          "publishAllPorts": true,
          "useSSL": true

@@ -6,13 +6,19 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<UserSecretsId>45882c60-a0fd-4db5-97e3-75994267a81d</UserSecretsId>
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<PreserveCompilationContext>true</PreserveCompilationContext>
 		<AssemblyName>ProSoft.Library.Api</AssemblyName>
 		<RootNamespace>ProSoft.Library.Api</RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.1">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+		<PackageReference Include="ProSoft.Results" Version="1.3.0" />
 	</ItemGroup>
 
 	<ItemGroup>

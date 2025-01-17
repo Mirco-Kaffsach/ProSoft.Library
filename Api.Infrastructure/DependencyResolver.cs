@@ -8,26 +8,27 @@ namespace ProSoft.Library.Api.Infrastructure;
 
 public static class DependencyResolver
 {
-	public static IServiceCollection AddProSoftLibrary(this IServiceCollection services)
+	public static IServiceCollection AddProSoftLibrary(this IServiceCollection services, string databaseEngine)
 	{
 		Guard.Against.Null(services);
+		Guard.Against.NullOrWhiteSpace(databaseEngine);
 
 		services
-			.AddProSoftLibraryCore()
+			.AddProSoftLibraryCore(databaseEngine)
 			;
 
 		return services;
 	}
 
-	public static IHost UseProSoftLibrary(this IHost host, ILogger logger)
+	public static IHost UseProSoftLibrary(this IHost host, ILogger logger, string databaseEngine)
 	{
 		Guard.Against.Null(host);
 		Guard.Against.Null(logger);
-
+		
 		logger.LogInformation("Configuring dependencies for: ProSoft.Library.Api");
 
 		host
-			.UseProSoftLibraryCore(logger)
+			.UseProSoftLibraryCore(logger, databaseEngine)
 			;
 
 		return host;

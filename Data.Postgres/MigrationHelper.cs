@@ -24,18 +24,18 @@ internal static class MigrationHelper
 				var db = services.GetRequiredService<T>();
 				var pendingMigrations = db.Database.GetPendingMigrations().ToList();
 
-				if (pendingMigrations.Any())
+				if (pendingMigrations.Count > 0)
 				{
-					var logMessage = new StringBuilder();
+					var logMessages = new StringBuilder();
 
-					logMessage.Append($"Found {pendingMigrations.Count} pending migrations:");
+					logMessages.Append($"Found {pendingMigrations.Count} pending migrations:");
 
 					foreach (var migration in pendingMigrations)
 					{
-						logMessage.Append($"\r\n- {migration}");
+						logMessages.Append($"\r\n- {migration}");
 					}
 
-					logger.LogInformation(logMessage.ToString());
+					logger.LogInformation(logMessages.ToString());
 					db.Database.Migrate();
 					logger.LogInformation("Migrations successfully applied.");
 				}
